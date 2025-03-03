@@ -212,7 +212,8 @@ instantaneous phase of the signal, and its time differential is the
 instantaneous frequency. Using this interpretation, let's try to compute the
 instantaneous frequencies of the three signals::
 
-    >>> from scipy import angle, unwrap
+    >>> from scipy import unwrap
+    >>> from numpy import angle
     >>> omega_s1 = unwrap(angle(hs1))  # unwrapped instantaneous phase
     >>> omega_s2 = unwrap(angle(hs2))
     >>> omega_s3 = unwrap(angle(hs3))

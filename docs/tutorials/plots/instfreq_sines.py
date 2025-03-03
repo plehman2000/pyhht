@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.signal import hilbert
-from scipy import angle, unwrap
+from scipy import  unwrap
 
 from math import pi
 
@@ -14,9 +14,9 @@ hs1 = hilbert(s1)
 hs2 = hilbert(s2)
 hs3 = hilbert(s3)
 
-omega_s1 = unwrap(angle(hs1))  # unwrapped instantaneous phase
-omega_s2 = unwrap(angle(hs2))
-omega_s3 = unwrap(angle(hs3))
+omega_s1 = unwrap(np.angle(hs1))  # unwrapped instantaneous phase
+omega_s2 = unwrap(np.angle(hs2))
+omega_s3 = unwrap(np.angle(hs3))
 
 f_inst_s1 = np.diff(omega_s1)  # instantaneous frequency
 f_inst_s2 = np.diff(omega_s2)
